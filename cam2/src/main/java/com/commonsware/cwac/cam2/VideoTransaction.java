@@ -21,6 +21,8 @@ public class VideoTransaction {
   int quality=1;
   int sizeLimit=0;
   int durationLimit=0;
+  int bitRate = 0;
+  int frameRate = 0;
 
   private VideoTransaction() {
     // please use the Builder
@@ -40,6 +42,14 @@ public class VideoTransaction {
 
   public int getDurationLimit() {
     return(durationLimit);
+  }
+
+  public int getBitRate() {
+    return(bitRate);
+  }
+
+  public int getFrameRate() {
+    return(frameRate);
   }
 
   public static class Builder {
@@ -69,6 +79,18 @@ public class VideoTransaction {
 
     public Builder durationLimit(int durationLimit) {
       result.durationLimit=durationLimit;
+
+      return(this);
+    }
+
+    public Builder bitRate(int bitRate) {
+      result.bitRate=bitRate;
+
+      return(this);
+    }
+
+    public Builder frameRate(int frameRate) {
+      result.frameRate=frameRate;
 
       return(this);
     }

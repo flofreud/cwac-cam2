@@ -62,7 +62,9 @@ public class VideoRecorderActivity extends AbstractCameraActivity {
         getIntent().getBooleanExtra(EXTRA_UPDATE_MEDIA_STORE, false),
         getIntent().getIntExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1),
         getIntent().getIntExtra(MediaStore.EXTRA_SIZE_LIMIT, 0),
-        getIntent().getIntExtra(MediaStore.EXTRA_DURATION_LIMIT, 0)));
+        getIntent().getIntExtra(MediaStore.EXTRA_DURATION_LIMIT, 0),
+        getIntent().getIntExtra(CameraFragment.ARG_BIT_RATE, 0),
+        getIntent().getIntExtra(CameraFragment.ARG_FRAME_RATE, 0)));
   }
 
   @SuppressWarnings("unused")
@@ -152,6 +154,30 @@ public class VideoRecorderActivity extends AbstractCameraActivity {
      */
     public IntentBuilder durationLimit(int limit) {
       result.putExtra(MediaStore.EXTRA_DURATION_LIMIT, limit);
+
+      return(this);
+    }
+
+    /**
+     * Sets the maximum bitrate of the video file.
+     *
+     * @param limit maximum bitrate
+     * @return
+     */
+    public IntentBuilder bitRate(int limit) {
+      result.putExtra(CameraFragment.ARG_BIT_RATE, limit);
+
+      return(this);
+    }
+
+    /**
+     * Sets the maximum frameRate of the video file.
+     *
+     * @param limit maximum frame rate of the video
+     * @return
+     */
+    public IntentBuilder frameRate(int limit) {
+      result.putExtra(CameraFragment.ARG_FRAME_RATE, limit);
 
       return(this);
     }

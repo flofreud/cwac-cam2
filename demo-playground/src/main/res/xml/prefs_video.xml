@@ -20,6 +20,16 @@
     android:key="highQuality"
     android:title="@string/title_quality"/>
   <ListPreference
+      android:key="bitRate"
+      android:entries="@array/bitRates"
+      android:entryValues="@array/bitRateValues"
+      android:title="@string/title_bitRate" />
+  <ListPreference
+      android:key="frameRate"
+      android:entries="@array/frameRates"
+      android:entryValues="@array/frameRateValues"
+      android:title="@string/title_frameRate" />
+  <ListPreference
     android:key="durationLimit"
     android:entries="@array/durations"
     android:entryValues="@array/durationValues"

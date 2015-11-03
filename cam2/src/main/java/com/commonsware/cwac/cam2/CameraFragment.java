@@ -49,6 +49,8 @@ public class CameraFragment extends Fragment {
   private static final String ARG_VIDEO_QUALITY="quality";
   private static final String ARG_SIZE_LIMIT="sizeLimit";
   private static final String ARG_DURATION_LIMIT="durationLimit";
+  public static final String ARG_BIT_RATE="bitRate";
+  public static final String ARG_FRAME_RATE="frameRate";
   private CameraController ctlr;
   private ViewGroup previewStack;
   private FloatingActionButton fabPicture;
@@ -73,7 +75,7 @@ public class CameraFragment extends Fragment {
   public static CameraFragment newVideoInstance(Uri output,
                                                 boolean updateMediaStore,
                                                 int quality, int sizeLimit,
-                                                int durationLimit) {
+                                                int durationLimit, int bitRate, int frameRate) {
     CameraFragment f=new CameraFragment();
     Bundle args=new Bundle();
 
@@ -83,6 +85,8 @@ public class CameraFragment extends Fragment {
     args.putInt(ARG_VIDEO_QUALITY, quality);
     args.putInt(ARG_SIZE_LIMIT, sizeLimit);
     args.putInt(ARG_DURATION_LIMIT, durationLimit);
+    args.putInt(ARG_BIT_RATE, bitRate);
+    args.putInt(ARG_FRAME_RATE, frameRate);
     f.setArguments(args);
 
     return(f);
@@ -333,7 +337,9 @@ public class CameraFragment extends Fragment {
         b.to(new File(output.getPath()))
          .quality(getArguments().getInt(ARG_VIDEO_QUALITY, 1))
          .sizeLimit(getArguments().getInt(ARG_SIZE_LIMIT, 0))
-         .durationLimit(getArguments().getInt(ARG_DURATION_LIMIT, 0));
+         .durationLimit(getArguments().getInt(ARG_DURATION_LIMIT, 0))
+         .bitRate(getArguments().getInt(ARG_BIT_RATE, 0))
+         .frameRate(getArguments().getInt(ARG_FRAME_RATE, 0));
 
         ctlr.recordVideo(b.build());
         isVideoRecording=true;

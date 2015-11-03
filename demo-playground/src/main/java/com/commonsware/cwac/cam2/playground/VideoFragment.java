@@ -105,6 +105,18 @@ public class VideoFragment extends PreferenceFragment {
       b.forceClassic();
     }
 
+    String bitrateLimit=prefs.getString("bitRate", null);
+
+    if (bitrateLimit!=null) {
+      b.bitRate(Integer.parseInt(bitrateLimit));
+    }
+
+    String framerateLimit=prefs.getString("frameRate", null);
+
+    if (framerateLimit!=null) {
+      b.frameRate(Integer.parseInt(framerateLimit));
+    }
+
     String durationLimit=prefs.getString("durationLimit", null);
 
     if (durationLimit!=null) {

@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string-array name="bitRates">
+    <item>No limit</item>
+    <item>100kb</item>
+    <item>200kb</item>
+    <item>300kb</item>
+  </string-array>
+  <string-array name="bitRateValues">
+    <item>0</item>
+    <item>100000</item>
+    <item>200000</item>
+    <item>300000</item>
+  </string-array>
+  <string-array name="frameRates">
+    <item>No limit</item>
+    <item>10</item>
+    <item>15</item>
+    <item>30</item>
+    <item>60</item>
+  </string-array>
+  <string-array name="frameRateValues">
+    <item>0</item>
+    <item>10</item>
+    <item>15</item>
+    <item>30</item>
+    <item>60</item>
+  </string-array>
   <string-array name="durations">
     <item>No limit</item>
     <item>5 seconds</item>

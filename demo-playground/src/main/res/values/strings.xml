@@ -13,6 +13,8 @@
 	<string name="title_force_classic">Force classic API</string>
 	<string name="title_video">Capture video</string>
 	<string name="title_quality">Record high-quality video</string>
+	<string name="title_bitRate">Set bitrate limit</string>
+	<string name="title_frameRate">Set frame rate limit</string>
 	<string name="title_duration">Set duration limit</string>
 	<string name="title_size">Set size limit</string>
 	<string name="title_mirror_preview">Mirror Preview</string>
