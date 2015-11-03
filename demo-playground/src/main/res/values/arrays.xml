@@ -2,15 +2,19 @@
 <resources>
   <string-array name="bitRates">
     <item>No limit</item>
-    <item>100kb</item>
-    <item>200kb</item>
-    <item>300kb</item>
+    <item>0.5mb</item>
+    <item>1.0mb</item>
+    <item>2.0mb</item>
+    <item>5.0mb</item>
+    <item>8.0mb</item>
   </string-array>
   <string-array name="bitRateValues">
     <item>0</item>
-    <item>100000</item>
-    <item>200000</item>
-    <item>300000</item>
+    <item>500000</item>
+    <item>1000000</item>
+    <item>2000000</item>
+    <item>5000000</item>
+    <item>8000000</item>
   </string-array>
   <string-array name="frameRates">
     <item>No limit</item>
